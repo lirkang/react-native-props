@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "custom your props",
   "main": "index.ts",
-  "repository": {},
+  "repository": "https://github.com/LIiErkang/react-native-props",
   "scripts": {},
   "keywords": [],
   "author": "likan",
