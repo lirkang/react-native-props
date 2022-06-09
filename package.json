@@ -1,0 +1,17 @@
+{
+  "name": "react-native-props",
+  "version": "1.0.0",
+  "description": "custom your props",
+  "main": "index.ts",
+  "repository": {},
+  "scripts": {},
+  "keywords": [],
+  "author": "likan",
+  "license": "ISC",
+  "dependencies": {
+    "react-native": "^0.68.2"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.67.8"
+  }
+}
