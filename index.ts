@@ -43,6 +43,7 @@ export interface SetCustomPropsDTO {
   ): SetCustomPropsDTO
   next: SetCustomPropsDTO
 }
+
 /** 可以修改的组件 */
 export const components: Record<keyof ComponentsProps, any> = {
   View,
