@@ -5,7 +5,9 @@
   "main": "index.ts",
   "repository": "https://github.com/LIiErkang/react-native-props",
   "scripts": {},
-  "keywords": [],
+  "keywords": [
+    "react-native"
+  ],
   "author": "likan",
   "license": "ISC",
   "dependencies": {
