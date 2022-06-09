@@ -1,6 +1,6 @@
 {
   "name": "react-native-props",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "custom your props",
   "main": "index.ts",
   "repository": "https://github.com/LIiErkang/react-native-props",
