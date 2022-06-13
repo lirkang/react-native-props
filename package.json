@@ -1,19 +1,16 @@
 {
   "name": "react-native-props",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Customize global component properties for react-native",
-  "author": "likan",
-  "license": "ISC",
+  "author": "likan <li0623for@gmail.com>",
+  "license": "MIT",
   "keywords": [
-    "react-native"
+    "react-native",
+    "props"
   ],
   "main": "index.ts",
-  "repository": "https://github.com/LIiErkang/react-native-props",
-  "scripts": {},
-  "dependencies": {
-    "react-native": "^0.68.2"
-  },
-  "devDependencies": {
-    "@types/react-native": "^0.67.8"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LIiErkang/react-native-props"
   }
 }
