@@ -64,6 +64,7 @@ const setCustomProps: SetCustomPropsDTO = function (name, props) {
   if (name && props) {
     const component = components[name]
 
+    // @ts-ignore
     const { render, defaultProps } = component
 
     // @ts-ignore
