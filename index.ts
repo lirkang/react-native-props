@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 /**
  * @Author likan
  * @Date 2022-06-09 11:24:40
@@ -8,18 +6,49 @@
 
 import {
   Button,
+  ButtonProps,
   Image,
+  ImageProps,
   ScrollView,
+  ScrollViewProps,
   Switch,
+  SwitchProps,
   Text,
   TextInput,
+  TextInputProps,
+  TextProps,
   TouchableOpacity,
-  View
+  TouchableOpacityProps,
+  View,
+  ViewProps
 } from 'react-native'
-import { ComponentsDTO, SetCustomPropsDTO } from './index.d'
+
+/** props类型 */
+interface ComponentsPropsDTO {
+  readonly View: ViewProps
+  readonly Text: TextProps
+  readonly ScrollView: ScrollViewProps
+  readonly TextInput: TextInputProps
+  readonly TouchableOpacity: TouchableOpacityProps
+  readonly Image: ImageProps
+  readonly Button: ButtonProps
+  readonly Switch: SwitchProps
+}
+
+/** 函数类型 */
+interface SetCustomPropsDTO {
+  <
+    C extends keyof ComponentsPropsDTO,
+    P extends Partial<ComponentsPropsDTO[C]>
+  >(
+    name: C,
+    props: P
+  ): SetCustomPropsDTO
+  next: SetCustomPropsDTO
+}
 
 /** 可以修改的组件 */
-export const components: ComponentsDTO = {
+const components: Record<keyof ComponentsPropsDTO, unknown> = {
   View,
   Text,
   ScrollView,
@@ -31,13 +60,16 @@ export const components: ComponentsDTO = {
 }
 
 /** 自定义组件属性*/
-export const setCustomProps: SetCustomPropsDTO = function (name, props) {
+const setCustomProps: SetCustomPropsDTO = function (name, props) {
   if (name && props) {
     const component = components[name]
 
+    // @ts-ignore
     const { render, defaultProps } = component
 
+    // @ts-ignore
     component.defaultProps = { ...defaultProps }
+    // @ts-ignore
     component.render = function (originProps: typeof props, ref: unknown) {
       const preProps = originProps
 
