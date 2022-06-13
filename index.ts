@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /**
  * @Author likan
  * @Date 2022-06-09 11:24:40
@@ -6,46 +8,18 @@
 
 import {
   Button,
-  ButtonProps,
   Image,
-  ImageProps,
   ScrollView,
-  ScrollViewProps,
   Switch,
-  SwitchProps,
   Text,
   TextInput,
-  TextInputProps,
-  TextProps,
   TouchableOpacity,
-  TouchableOpacityProps,
-  View,
-  ViewProps
+  View
 } from 'react-native'
-
-/** props类型 */
-export interface ComponentsProps {
-  readonly View: ViewProps
-  readonly Text: TextProps
-  readonly ScrollView: ScrollViewProps
-  readonly TextInput: TextInputProps
-  readonly TouchableOpacity: TouchableOpacityProps
-  readonly Image: ImageProps
-  readonly Button: ButtonProps
-  readonly Switch: SwitchProps
-}
-
-/** 函数类型 */
-export interface SetCustomPropsDTO {
-  <C extends keyof ComponentsProps, P extends Partial<ComponentsProps[C]>>(
-    name: C,
-    props: P
-  ): SetCustomPropsDTO
-  next: SetCustomPropsDTO
-}
+import { ComponentsDTO, SetCustomPropsDTO } from './index.d'
 
 /** 可以修改的组件 */
-export const components: Record<keyof ComponentsProps, any> = {
+export const components: ComponentsDTO = {
   View,
   Text,
   ScrollView,
@@ -68,15 +42,12 @@ export const setCustomProps: SetCustomPropsDTO = function (name, props) {
       const preProps = originProps
 
       Object.keys(props).forEach(key => {
-        // @ts-ignore
         if (Array.isArray(props[key])) {
-          // @ts-ignore
           originProps = {
             ...originProps,
             [key]: [props[key], originProps[key]]
           }
         } else {
-          // @ts-ignore
           originProps = {
             ...originProps,
             [key]: originProps[key] ?? props[key]

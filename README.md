@@ -1,8 +1,10 @@
 # react-native-props
 
-支持 react-native 自定义全局组件属性
+react-native 自定义全局组件属性
 
-## 支持的组件
+Customize global component properties for react-native
+
+## 支持的组件/Supported components
 
 - View
 - Text
@@ -15,9 +17,9 @@
 
 ---
 
-### 示例
+### 示例/Simple usage
 
-- 基本使用
+- 基本使用/Base Usage
 
 ```typescript
 setCustomProps('Image', {
