@@ -5,34 +5,70 @@
  */
 
 import {
+  ActivityIndicator,
+  ActivityIndicatorProps,
   Button,
   ButtonProps,
+  FlatList,
+  FlatListProps,
   Image,
+  ImageBackground,
+  ImageBackgroundProps,
   ImageProps,
+  KeyboardAvoidingView,
+  KeyboardAvoidingViewProps,
+  Modal,
+  ModalProps,
+  Pressable,
+  PressableProps,
+  RefreshControl,
+  RefreshControlProps,
   ScrollView,
   ScrollViewProps,
+  SectionList,
+  SectionListProps,
+  StatusBar,
+  StatusBarProps,
   Switch,
   SwitchProps,
   Text,
   TextInput,
   TextInputProps,
   TextProps,
+  TouchableHighlight,
+  TouchableHighlightProps,
   TouchableOpacity,
   TouchableOpacityProps,
+  TouchableWithoutFeedback,
+  TouchableWithoutFeedbackProps,
   View,
-  ViewProps
+  ViewProps,
+  VirtualizedList,
+  VirtualizedListProps
 } from 'react-native'
 
 /** props类型 */
 interface ComponentsPropsDTO {
-  readonly View: ViewProps
-  readonly Text: TextProps
-  readonly ScrollView: ScrollViewProps
-  readonly TextInput: TextInputProps
-  readonly TouchableOpacity: TouchableOpacityProps
-  readonly Image: ImageProps
-  readonly Button: ButtonProps
-  readonly Switch: SwitchProps
+  View: ViewProps
+  Text: TextProps
+  ScrollView: ScrollViewProps
+  TextInput: TextInputProps
+  TouchableOpacity: TouchableOpacityProps
+  Image: ImageProps
+  Button: ButtonProps
+  Switch: SwitchProps
+  VirtualizedList: VirtualizedListProps
+  Modal: ModalProps
+  TouchableWithoutFeedback: TouchableWithoutFeedbackProps
+  TouchableHighlight: TouchableHighlightProps
+  RefreshControl: RefreshControlProps
+  ImageBackground: ImageBackgroundProps
+  ActivityIndicator: ActivityIndicatorProps
+  KeyboardAvoidingView: KeyboardAvoidingViewProps
+  Pressable: PressableProps
+  SectionList: SectionListProps
+  StatusBar: StatusBarProps
+  FlatList: FlatListProps
 }
 
 /** 函数类型 */
@@ -56,7 +92,19 @@ const components: Record<keyof ComponentsPropsDTO, unknown> = {
   TouchableOpacity,
   Image,
   Button,
-  Switch
+  Switch,
+  VirtualizedList,
+  Modal,
+  TouchableWithoutFeedback,
+  TouchableHighlight,
+  RefreshControl,
+  ImageBackground,
+  ActivityIndicator,
+  KeyboardAvoidingView,
+  Pressable,
+  SectionList,
+  StatusBar,
+  FlatList
 }
 
 /** 自定义组件属性*/
