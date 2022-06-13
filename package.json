@@ -1,6 +1,6 @@
 {
   "name": "react-native-props",
-  "version": "1.2.0",
+  "version": "1.2.01",
   "description": "Customize global component properties for react-native",
   "author": "likan <li0623for@gmail.com>",
   "license": "MIT",
@@ -16,5 +16,8 @@
   },
   "peerDependencies": {
     "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.67.8"
   }
 }

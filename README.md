@@ -1,8 +1,8 @@
 # react-native-props
 
-自定义组件 react-native 全局属性, 支持所有的原生组件.
+自定义组件 react-native 全局属性, 支持所有的原生组件(除 Pressable 外).
 
-Customize global component properties for react-native, all native components are Available.
+Customize global component properties for react-native, all native components are Available(Excluded Pressable).
 
 ## 注意/Attention
 

@@ -19,8 +19,6 @@ import {
   KeyboardAvoidingViewProps,
   Modal,
   ModalProps,
-  Pressable,
-  PressableProps,
   RefreshControl,
   RefreshControlProps,
   ScrollView,
@@ -57,7 +55,7 @@ interface ComponentsPropsDTO {
   Image: ImageProps
   Button: ButtonProps
   Switch: SwitchProps
-  VirtualizedList: VirtualizedListProps
+  VirtualizedList: VirtualizedListProps<unknown>
   Modal: ModalProps
   TouchableWithoutFeedback: TouchableWithoutFeedbackProps
   TouchableHighlight: TouchableHighlightProps
@@ -65,10 +63,9 @@ interface ComponentsPropsDTO {
   ImageBackground: ImageBackgroundProps
   ActivityIndicator: ActivityIndicatorProps
   KeyboardAvoidingView: KeyboardAvoidingViewProps
-  Pressable: PressableProps
-  SectionList: SectionListProps
+  SectionList: SectionListProps<unknown>
   StatusBar: StatusBarProps
-  FlatList: FlatListProps
+  FlatList: FlatListProps<unknown>
 }
 
 /** 函数类型 */
@@ -101,7 +98,6 @@ const components: Record<keyof ComponentsPropsDTO, unknown> = {
   ImageBackground,
   ActivityIndicator,
   KeyboardAvoidingView,
-  Pressable,
   SectionList,
   StatusBar,
   FlatList
