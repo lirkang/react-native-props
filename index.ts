@@ -1,7 +1,7 @@
 /**
  * @Author likan
- * @Date 2022-06-09 11:24:40
- * @FilePath E:\WorkSpace\txzeveryapp\src\common\config\util.ts
+ * @Date 2022-06-20 16:41:04
+ * @FilePath E:\TestSpace\react-native-props\index.ts
  */
 
 import {
@@ -69,15 +69,15 @@ interface ComponentsPropsDTO {
 }
 
 /** 函数类型 */
-interface SetCustomPropsDTO {
+interface setGlobalPropsDTO {
   <
     C extends keyof ComponentsPropsDTO,
     P extends Partial<ComponentsPropsDTO[C]>
   >(
     name: C,
     props: P
-  ): SetCustomPropsDTO
-  next: SetCustomPropsDTO
+  ): setGlobalPropsDTO
+  next: setGlobalPropsDTO
 }
 
 /** 可以修改的组件 */
@@ -104,7 +104,7 @@ const components: Record<keyof ComponentsPropsDTO, unknown> = {
 }
 
 /** 自定义组件属性*/
-const setCustomProps: SetCustomPropsDTO = function (name, props) {
+const setGlobalProps: setGlobalPropsDTO = function (name, props) {
   if (name && props) {
     const component = components[name]
 
@@ -139,9 +139,9 @@ const setCustomProps: SetCustomPropsDTO = function (name, props) {
     }
   }
 
-  return setCustomProps
+  return setGlobalProps
 }
 
-setCustomProps.next = setCustomProps
+setGlobalProps.next = setGlobalProps
 
-export default setCustomProps
+export default setGlobalProps

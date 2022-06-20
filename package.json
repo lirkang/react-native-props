@@ -1,6 +1,6 @@
 {
   "name": "react-native-props",
-  "version": "1.2.01",
+  "version": "1.2.3",
   "description": "Customize global component properties for react-native",
   "author": "likan <li0623for@gmail.com>",
   "license": "MIT",
